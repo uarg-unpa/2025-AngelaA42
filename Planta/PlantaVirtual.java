@@ -3,7 +3,7 @@ public class PlantaVirtual {
     private int nivelAgua;
     private int altura;
     private String tipo;
-    private int ultimoCrecimiento = 0;
+
 
     //constructor
 
@@ -39,18 +39,17 @@ public class PlantaVirtual {
     }
  
     //aumento de altura
-
-    public int crecer(int cmCrecidos){
-        if(cmCrecidos>0){
-            this.altura = this.altura + cmCrecidos;
-            this.ultimoCrecimiento = cmCrecidos;
-            return cmCrecidos;
-        }
-        else {
-            this.ultimoCrecimiento = 0;
-            return 0;
-        }
+    public int crecer(){
+        this.altura += 1;
+        return 1;
     }
+    public void regar(){
+        if(this.nivelAgua>100){
+            this.nivelAgua = 100;
+        }
+        this.crecer();
+    }
+
     public String reporte(){
         return estadoDeRiego();
     }

@@ -4,7 +4,7 @@ public class TestPlanta{
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Ingrese datos de la planta");
-        System.out.println("Nombre");
+        System.out.println("Nombre: ");
         String nombre = sc.nextLine();
 
         System.out.println("Nivel de agua (%): ");
@@ -20,7 +20,7 @@ public class TestPlanta{
         PlantaVirtual p1 = new PlantaVirtual(nombre, nivelAgua, altura, tipo);
 
         System.out.println("\nDatos de la planta: " + p1);
-        System.out.println("Repote: " + p1.reporte());
+        System.out.println("Repote: " + p1.reporte() + " | Crecimiento: " + p1.crecer() + " cm");
 
         sc.close();
     }
