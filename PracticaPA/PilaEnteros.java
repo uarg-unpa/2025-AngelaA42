@@ -30,16 +30,8 @@ public class PilaEnteros {
         boolean encontrado = false;
 
         // saco de esta pila hacia aux hasta hallar x o vaciar
-        while (!estaVacia()) {
-            int t = sacar();
-            if (t == x) {
-                encontrado = true;     // x eliminado 
-                break;
-            } else {
-                aux.meter(t);          // lo guardo y cuento como "movido"
-                movidos++;
-            }
-        }
+         
+    }
         // si no estaba, restauro y aviso
         if (!encontrado) {
             while (!aux.estaVacia()) {
@@ -52,7 +44,7 @@ public class PilaEnteros {
             meter(aux.sacar());
         }
         return movidos; 
-    }
+        
     @Override
     public String toString() {
         if (estaVacia()) return "[]";
